@@ -1,0 +1,11 @@
+.texto-error {
+    color: red;
+}
+
+.grande {
+    font-size: 40px;
+}
+
+.texto-exito {
+    color: green;
+}
