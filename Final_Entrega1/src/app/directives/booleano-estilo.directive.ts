@@ -12,7 +12,7 @@ export class BooleanoEstiloDirective {
   ) { }
 
   ngOnInit(): void {
-    this.rendered.setStyle(this.elemento.nativeElement, 'padding', '0px 10px 0px 10px');
+    this.rendered.setStyle(this.elemento.nativeElement, 'padding', '5px 10px 5px 10px');
     this.rendered.setStyle(this.elemento.nativeElement, 'border-radius', '40px');
     this.rendered.setStyle(this.elemento.nativeElement, 'border-radius', '40px');
     this.rendered.setStyle(this.elemento.nativeElement, 'color', '#FFFFFF');
