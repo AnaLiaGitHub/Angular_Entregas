@@ -11,6 +11,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
+import { ReactiveFormsModule } from "@angular/forms";
+import { CdkTableModule } from "@angular/cdk/table";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
     imports: [
@@ -23,7 +26,11 @@ import {MatListModule} from '@angular/material/list';
       MatDialogModule,
       MatSidenavModule,
       MatToolbarModule,
-      MatListModule
+      MatListModule,
+      MatFormFieldModule,
+      ReactiveFormsModule,
+      CdkTableModule,
+      CommonModule
     ],
     exports: [
         MatButtonModule,
@@ -35,7 +42,11 @@ import {MatListModule} from '@angular/material/list';
         MatDialogModule,
         MatSidenavModule,
         MatToolbarModule,
-        MatListModule
+        MatListModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        CdkTableModule,
+        CommonModule
       ],
   })
   

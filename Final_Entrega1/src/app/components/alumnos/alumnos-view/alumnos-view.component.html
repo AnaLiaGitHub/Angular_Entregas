@@ -9,9 +9,8 @@
 
         <input type="text" matInput>
     </mat-form-field>
-    <button mat-icon-button class="col-md-4">
-        <mat-icon>format_list_bulleted_add</mat-icon>
-        <!-- <mat-icon>assignment_add</mat-icon> -->
+    <button mat-icon-button class="col-md-4" (click)="dialogAlumno()">
+        <mat-icon>assignment_add</mat-icon>
     </button>
 
     <div class="row p-2">
@@ -25,9 +24,6 @@
             <ng-container matColumnDef="nombre">
                 <th mat-header-cell *matHeaderCellDef="">Nombre</th>
                 <td mat-cell *matCellDef="let element">{{element.nombre}}</td>
-                <!-- error -->
-                <!-- <mat-error *ngIf="errorHandling('nombre', 'required')">
-          You must provide a<strong>name</strong></mat-error> -->
             </ng-container>
             <!-- 'grupo' -->
             <ng-container matColumnDef="apellido">
@@ -48,10 +44,10 @@
             <ng-container matColumnDef="acciones">
                 <th mat-header-cell *matHeaderCellDef>Acciones</th>
                 <td mat-cell *matCellDef="let element">
-                    <button mat-icon-button>
+                    <button mat-icon-button (click)="editarAlumno(element)">
                         <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button>
+                    <button mat-icon-button (click)="eliminarAlumno(element.id)">
                         <mat-icon>delete</mat-icon>
                     </button>
                 </td>

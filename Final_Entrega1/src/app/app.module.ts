@@ -13,6 +13,7 @@ import { FiltroCursosPipe } from './pipes/filtro-cursos.pipe';
 import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AlumnosViewComponent } from './components/alumnos/alumnos-view/alumnos-view.component';
+import { AlumnosAltaComponent } from './components/alumnos/alumnos-alta/alumnos-alta.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AlumnosViewComponent } from './components/alumnos/alumnos-view/alumnos-
     BooleanoEstiloDirective,
     FiltroCursosPipe,
     ToolbarComponent,
-    AlumnosViewComponent
+    AlumnosViewComponent,
+    AlumnosAltaComponent
   ],
   imports: [
     BrowserModule,
