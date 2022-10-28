@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Curso } from 'src/app/models/curso';
+import { CursoService } from 'src/app/services/curso.service';
 
 @Component({
   selector: 'app-demo-table',
@@ -8,17 +9,16 @@ import { Curso } from 'src/app/models/curso';
   styleUrls: ['./demo-table.component.css']
 })
 export class DemoTableComponent implements OnInit {
-  cursos: Curso[] = [
-    { nombre: 'Desarrollo Web', comision: '123456', profesor: 'Luis', fechaInicio: new Date(2022, 0, 1), fechaFin: new Date(2022, 1, 28), inscripcionAbierta: true, imagen: './img/luis.jpg'},
-    { nombre: 'JavaScript', comision: '123457', profesor: 'Julieta', fechaInicio: new Date(2022, 1, 1), fechaFin: new Date(2022, 2, 31), inscripcionAbierta: false, imagen: './img/julieta.jpg'},
-    { nombre: 'Angular', comision: '123458', profesor: 'Edinson', fechaInicio: new Date(2022, 2, 1), fechaFin: new Date(2022, 2, 30), inscripcionAbierta: false, imagen: './img/edinson.jpg'}
-  ]
+  cursos!: Curso[];
   columnas: string[] = ['nombre', 'comision', 'profesor', 'fechaInicio', 'fechaFin', 'inscripcionAbierta', 'acciones'];
-  dataSource: MatTableDataSource<Curso> = new MatTableDataSource<Curso>(this.cursos);
+  dataSource!: MatTableDataSource<Curso>;
 
-  constructor() { }
+  constructor(private cursoService: CursoService) { 
+    
+  }
 
   ngOnInit(): void {
+    this.dataSource = new MatTableDataSource<Curso>(this.cursoService.cursos);
   }
 
   filtrarCurso(event: Event) {

@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Curso } from '../models/curso';
+import { Curso, listaCursos } from '../models/curso';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CursoService {
 
-  cursos: Curso[] = [];
+  cursos: Curso[] = listaCursos;
 
   cursoObservable: Observable<Curso[]>;
+  static obtenerCursoObservable: any;
 
   constructor() { 
     this.cursoObservable = new Observable<Curso[]>((suscriptor) => {
