@@ -3,8 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { DemoTableComponent } from './components/demo-table/demo-table.component';
-import { DemoCardsComponent } from './components/demo-cards/demo-cards.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { BooleanATextoPipe } from './pipes/boolean-a-texto.pipe';
@@ -14,6 +12,10 @@ import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.com
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AlumnosViewComponent } from './components/alumnos/alumnos-view/alumnos-view.component';
 import { AlumnosAltaComponent } from './components/alumnos/alumnos-alta/alumnos-alta.component';
+import { AutenticacionModule } from './autenticacion/autenticacion.module';
+import { DemoTableComponent } from './cursos/cursos-table/demo-table.component';
+import { DemoCardsComponent } from './cursos/cursos-cards/demo-cards.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AlumnosAltaComponent } from './components/alumnos/alumnos-alta/alumnos-
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    AutenticacionModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
