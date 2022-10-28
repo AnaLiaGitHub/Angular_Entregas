@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
-import { Alumno, listaAlumnos } from 'src/app/moduls/alumnos';
+import { Alumno, listaAlumnos } from 'src/app/models/alumnos';
 import { AlumnosAltaComponent } from '../alumnos-alta/alumnos-alta.component';
 
 @Component({

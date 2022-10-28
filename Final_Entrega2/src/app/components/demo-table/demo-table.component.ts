@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Curso } from 'src/app/moduls/curso';
+import { Curso } from 'src/app/models/curso';
 
 @Component({
   selector: 'app-demo-table',
