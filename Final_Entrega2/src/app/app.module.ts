@@ -16,6 +16,7 @@ import { AutenticacionModule } from './autenticacion/autenticacion.module';
 import { DemoTableComponent } from './cursos/cursos-table/demo-table.component';
 import { DemoCardsComponent } from './cursos/cursos-cards/demo-cards.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     FiltroCursosPipe,
     ToolbarComponent,
     AlumnosViewComponent,
-    AlumnosAltaComponent
+    AlumnosAltaComponent,
+    PaginaNoEncontradaComponent
   ],
   imports: [
     BrowserModule,
