@@ -1,11 +1,15 @@
 <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav navbar" fixedInViewport [attr.role]="'navigation'" [mode]="'over'"
         [opened]="false">
-        <mat-toolbar></mat-toolbar>
+        <mat-toolbar>
+            <a routerLink="">
+            <span>APRENDIDOS </span>
+            <mat-icon> highlight</mat-icon>
+        </a>
+        </mat-toolbar>
         <mat-nav-list>
-            <a mat-list-item href="#">Aprendidos</a>
-            <a mat-list-item href="#">Alumnos</a>
-            <a mat-list-item href="#">Cursos</a>
+            <a mat-list-item routerLink="">Alumnos</a>
+            <a mat-list-item href="cursos">Cursos</a>
             <a mat-list-item href="#">Inscripciones</a>
         </mat-nav-list>
     </mat-sidenav>

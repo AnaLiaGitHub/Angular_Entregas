@@ -13,13 +13,26 @@
   .mat-drawer-side {
     border-right: none;
   }
+
   .mat-nav-list .mat-list-item:hover{
     background-color: #673ab7;
     border-right: #673ab7 1px solid;
     color: aliceblue;
   }
+
   .sidenav .mat-toolbar {
     background: inherit;
+  }
+
+  .sidenav .mat-toolbar:hover {
+    background-color: #673ab7;
+    border-right: #673ab7 1px solid;
+    color: aliceblue;
+  }
+
+  .sidenav .mat-toolbar a {
+    text-decoration:none;
+    color: #000;
   }
   
   .mat-toolbar.mat-primary {
